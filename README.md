@@ -1,4 +1,4 @@
-# PROYECTO BASE: [TaskApp206] - Software Factory SENA
+# PROYECTO BASE: TaskApp206 - Software Factory SENA
 
 **Metodología:** *"Del Requerimiento al Producto"*
 
