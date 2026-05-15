@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playwrite+AR+Guides&display=swap');
+
 :root {
   --color-fondo: #FFF5E4;
   --color-contenedor: #FFFFFF;
@@ -11,6 +13,7 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
+
 
 /* FLEXBOX PARA CENTRAR */
 .container {
@@ -45,4 +48,104 @@ body {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+/*Tarjeta landing page */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;        /* Permite que las tarjetas bajen */
+  justify-content: center; /* Centra las tarjetas */
+  gap: 20px;              /* Espacio entre tarjetas */
+  padding: 16px;
+}
+
+/* Estilo de cada tarjeta */
+.Card_LandingPage {
+  flex: 1 1 320px;        /* Se adapta, mínimo 320px */
+  max-width: 80%;       /* No más de 320px */
+  min-width: 320px;
+  background: linear-gradient(to bottom, #9f95fa 0%, #FFF5E4 100%);
+  padding: 8px;
+  border-radius: 8px;
+  border: solid 0.5px #A7C7E7
+  text-align: center;     /* Centra el contenido dentro */
+}
+
+.Card_LandingPage img {
+  display: block;
+  width: 40%;             /* Imagen ocupa 60% del ancho de la tarjeta */
+  height: auto;           /* Mantiene proporción */
+  margin: 16px auto;
+  filter: drop-shadow(2px 0px 3px #515151);
+}
+.Card_LandingPage h3 {
+  text-align: center;
+  color: #03366a;
+  margin: 0 auto 40px auto;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;   
+  font-family: 'Archivo Black', sans-serif; 
+}
+.Card_LandingPage p {
+  text-align: center;
+  color: #075cb1;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  letter-spacing: 1px;   
+  color: ;
+}
+.Titulo_Tarjeta {
+
+  display: block;
+  width: 100%;
+  background: linear-gradient(to bottom, #03366a, #075cb1);
+  color: #FFF5E4;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 30px;
+  text-align: center;
+  margin: 0 0 40px 0;
+  letter-spacing: 2px;
+  border-radius: 0;
+  font-family: 'Archivo Black', sans-serif;    
+}
+section {
+  position: relative;          /* El contenedor controla posiciones internas */
+  min-height: 400px;           /* Altura mínima de 400px */
+  overflow: hidden;            /* Oculta lo que se recorte de la imagen */
+}
+
+section img {
+  width: 100%;                 /* Imagen ocupa todo el ancho */
+  height: 100%;                /* Imagen ocupa todo el alto del contenedor */
+  object-fit: cover;           /* La imagen se recorta por los lados, no se deforma */
+  min-height: 400px;           /* Nunca menos de 400px de alto */
+  display: block;
+}
+
+section h2 {
+  position: absolute;          /* Posición libre dentro del contenedor */
+  top: 20px;                   /* Arriba */
+  left: 20px;                  /* Izquierda */
+  color: #03366a;              /* Azul por defecto */
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.6); /* Fondo semitransparente para contraste */
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+section p {
+  position: absolute;
+  bottom: 20px;                /* Abajo */
+  right: 20px;                 /* Derecha */
+  color: #FFF;                 /* Blanco por defecto */
+  font-size: 1.2rem;
+  background: rgba(3,54,106,0.6); /* Fondo azul semitransparente */
+  padding: 10px 20px;
+  border-radius: 6px;
+  max-width: 40%;              /* Para que no ocupe toda la pantalla */
 }
