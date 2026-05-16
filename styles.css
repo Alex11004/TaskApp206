@@ -50,34 +50,34 @@ body {
   cursor: pointer;
 }
 /*Tarjeta landing page */
-.cards-container {
+.features-container {
   display: flex;
-  flex-wrap: wrap;        /* Permite que las tarjetas bajen */
-  justify-content: center; /* Centra las tarjetas */
-  gap: 20px;              /* Espacio entre tarjetas */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
   padding: 16px;
 }
 
 /* Estilo de cada tarjeta */
-.Card_LandingPage {
-  flex: 1 1 320px;        /* Se adapta, mínimo 320px */
-  max-width: 80%;       /* No más de 320px */
+.features_LandingPage {
+  flex: 1 1 320px;
+  max-width: 80%;
   min-width: 320px;
   background: linear-gradient(to bottom, #9f95fa 0%, #FFF5E4 100%);
   padding: 8px;
   border-radius: 8px;
   border: solid 0.5px #A7C7E7
-  text-align: center;     /* Centra el contenido dentro */
+  text-align: center;
 }
 
-.Card_LandingPage img {
+.features_LandingPage img {
   display: block;
-  width: 40%;             /* Imagen ocupa 60% del ancho de la tarjeta */
-  height: auto;           /* Mantiene proporción */
+  width: 40%;
+  height: auto;
   margin: 16px auto;
   filter: drop-shadow(2px 0px 3px #515151);
 }
-.Card_LandingPage h3 {
+.features_LandingPage h3 {
   text-align: center;
   color: #03366a;
   margin: 0 auto 40px auto;
@@ -87,7 +87,7 @@ body {
   letter-spacing: 1px;   
   font-family: 'Archivo Black', sans-serif; 
 }
-.Card_LandingPage p {
+.features_LandingPage p {
   text-align: center;
   color: #075cb1;
   margin: 0 auto 30px auto;
@@ -95,9 +95,8 @@ body {
   letter-spacing: 1px;   
   color: ;
 }
-.Titulo_Tarjeta {
+.Titulo_features {
 
-  display: block;
   width: 100%;
   background: linear-gradient(to bottom, #03366a, #075cb1);
   color: #FFF5E4;
@@ -111,41 +110,109 @@ body {
   border-radius: 0;
   font-family: 'Archivo Black', sans-serif;    
 }
-section {
-  position: relative;          /* El contenedor controla posiciones internas */
-  min-height: 400px;           /* Altura mínima de 400px */
-  overflow: hidden;            /* Oculta lo que se recorte de la imagen */
+.HeroSection {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
 }
 
-section img {
-  width: 100%;                 /* Imagen ocupa todo el ancho */
-  height: 100%;                /* Imagen ocupa todo el alto del contenedor */
-  object-fit: cover;           /* La imagen se recorta por los lados, no se deforma */
-  min-height: 400px;           /* Nunca menos de 400px de alto */
+.HeroSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
   display: block;
 }
 
-section h2 {
-  position: absolute;          /* Posición libre dentro del contenedor */
-  top: 20px;                   /* Arriba */
-  left: 20px;                  /* Izquierda */
-  color: #03366a;              /* Azul por defecto */
+.HeroTitle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #03366a;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: rgba(255,255,255,0.6); /* Fondo semitransparente para contraste */
+  background: rgba(255,255,255,0.6);
   padding: 10px 20px;
   border-radius: 6px;
+  font-family: 'Archivo Black', sans-serif;
 }
 
-section p {
+
+.HeroText {
   position: absolute;
-  bottom: 20px;                /* Abajo */
-  right: 20px;                 /* Derecha */
-  color: #FFF;                 /* Blanco por defecto */
+  bottom: 20px;
+  right: 20px;
+  color: #FFF; 
   font-size: 1.2rem;
-  background: rgba(3,54,106,0.6); /* Fondo azul semitransparente */
+  background: rgba(3,54,106,0.6);
   padding: 10px 20px;
   border-radius: 6px;
-  max-width: 40%;              /* Para que no ocupe toda la pantalla */
+  max-width: 40%;
+}
+  .HeroTitle {
+    color: #FFF; 
+    background: rgba(3,54,106,0.6);
+  }
+  .HeroText {
+    color: #03366a;
+    background: rgba(255,255,255,0.6);
+  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #03366a;
+  padding: 10px 20px;
+  color: white;
+}
+
+header h1 {
+  font-family: 'Archivo Black', sans-serif;
+  margin: 0;
+}
+
+/* Menú horizontal por defecto */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botón hamburguesa oculto en pantallas grandes */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #075cb1;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
